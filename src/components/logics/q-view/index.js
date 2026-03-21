@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/ui/index.js";
+import { UIElement } from "ziko/domm/index.js";
 import { clamp } from 'ziko/math/utils/index.js'
 class UIQView extends UIElement{
     constructor({score, round_func = Math.floor},wrapper, ...items){

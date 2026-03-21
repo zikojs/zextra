@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/ui";
+import { UIElement } from "ziko/domm";
 
 class UIFade extends UIElement {
     constructor({ appear = true, ease_in = 'ease-in-out', ease_out = 'ease-in-out', t_in = '300ms', t_out = '300ms'} = {}, content) {

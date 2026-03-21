@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/ui";
+import { UIElement } from "ziko/domm";
 import {ArrowUpRight} from 'ziko-lucide/arrowupright'
 
 class UILink extends UIElement{

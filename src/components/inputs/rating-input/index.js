@@ -1,4 +1,4 @@
-import { UIElement, tags } from "ziko/ui";
+import { UIElement, tags } from "ziko/dom";
 import { useState } from "ziko/hooks";
 import { clamp } from "ziko/math";
 // import Heart from "ziko-lucide/heart" 

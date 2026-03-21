@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/ui";
+import { UIElement } from "ziko/dom";
 import { throttle } from 'ziko/time'
 import '../styles/conventions.css';
 import { 

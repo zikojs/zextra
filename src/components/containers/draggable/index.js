@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/ui";
+import { UIElement } from "ziko/dom";
 import './index.css'
 class UIDraggable extends UIElement{
     constructor(...items){

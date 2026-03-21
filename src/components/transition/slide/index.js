@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/ui";
+import { UIElement } from "ziko/dom";
 
 class UISlide extends UIElement {
     constructor({ appear = true, direction = 'top', ease_in = 'ease-in-out', ease_out = 'ease-in-out', t_in = '300ms', t_out = '300ms', distance = '100%' } = {}, content) {

@@ -1,5 +1,5 @@
 import { ZextraUI } from '../../../constructor/zextra-ui.js';
-import { tags } from 'ziko/ui';
+import { tags } from 'ziko/dom';
 import './index.css'
 export class UIBlockquote extends ZextraUI{
     constructor({ cite, quote = ''} = {}){

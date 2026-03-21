@@ -1,6 +1,6 @@
 import { ZextraUI } from '../../../constructor/zextra-ui.js';
 import './index.css';
-import { tags, call_with_optional_props, UIElement } from 'ziko/ui';
+import { tags, call_with_optional_props, UIElement } from 'ziko/dom';
 
 const { ul, li, a } = tags;
 

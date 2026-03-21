@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/ui";
+import { UIElement } from "ziko/dom";
 class UITabs extends UIElement{
     constructor(Controller, Panel, {orientation = 'vertical'} = {}){
         super({element : 'div', name : 'zextra_tabs'});

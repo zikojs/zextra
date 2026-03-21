@@ -1,5 +1,5 @@
-import { UIElement } from 'ziko/ui'
-// import { add_vendor_prefix } from 'ziko/ui/utils/index.js'
+import { UIElement } from 'ziko/dom'
+// import { add_vendor_prefix } from 'ziko/dom/utils/index.js'
 // import { register_click_away_event } from 'ziko/events/custom-events/click-away.js'
 // import { register_swipe_event } from 'ziko/events/custom-events/swipe.js'
 import { 

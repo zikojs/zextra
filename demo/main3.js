@@ -2,7 +2,7 @@
 // import { Modal } from "zextra/dialog";
 import { Fade , Grow, Slide} from "zextra/transition";
 import 'zextra/style'
-import {  tags } from "ziko/ui";
+import {  tags } from "ziko/dom";
 
 // import { Callout } from "zextra/feedback";
 // import  Check  from 'ziko-lucide/Check'

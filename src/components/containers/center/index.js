@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/ui";
+import { UIElement } from "ziko/dom";
 import { ZextraUI } from "../../../constructor/zextra-ui.js";
 import './index.css'
 

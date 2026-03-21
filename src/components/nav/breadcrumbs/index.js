@@ -1,4 +1,4 @@
-import { UIElement, tags } from "ziko/ui";
+import { UIElement, tags } from "ziko/dom";
 import './index.css'
 
 class UIBreadcrumbs extends UIElement{

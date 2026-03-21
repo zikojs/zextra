@@ -1,4 +1,4 @@
-import { UIElement, Flex, tags } from "ziko/ui";
+import { UIElement, Flex, tags } from "ziko/dom";
 
 class UICallout extends UIElement{
     constructor({ title = null, color, icon = null, variant} = {}, content ){

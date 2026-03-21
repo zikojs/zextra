@@ -1,7 +1,7 @@
 import { Columns } from "zextra/layouts/columns";
 import { Blockquote } from "zextra/typography";
 import { TableOfContents } from 'zextra/nav'
-import { tags } from "ziko/ui";
+import { tags } from "ziko/dom";
 
 
 globalThis.b = Blockquote({
@@ -26,7 +26,7 @@ export default function App(){
 
 }
 
-// import { View, tags, Flex, text } from "ziko/ui";
+// import { View, tags, Flex, text } from "ziko/dom";
 // import { Center } from 'zextra/containers'
 // import { Shortcut } from 'zextra/typography'
 // import { DirectionProvider } from "zextra/providers/direction";

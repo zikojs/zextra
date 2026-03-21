@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/ui";
+import { UIElement } from "ziko/dom";
 
 class UIGrow extends UIElement {
     constructor({ appear = true, ease_in = 'ease-in-out', ease_out = 'ease-in-out', t_in = '300ms', t_out = '300ms', start_scale = 0, end_scale = 1 } = {}, content) {

@@ -1,4 +1,4 @@
-import { UIElement } from 'ziko/ui'
+import { UIElement } from 'ziko/dom'
 class UIDialog extends UIElement{
     constructor(content){
         super({element : 'dialog', name : 'zextra_dialog'});

@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/ui/index.js";
+import { UIElement } from "ziko/dom/index.js";
 import { clamp } from 'ziko/math/utils/index.js'
 class UIQText extends UIElement{
     constructor({score, func = Math.floor}, text, after = ''){

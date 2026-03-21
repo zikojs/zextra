@@ -1,7 +1,7 @@
 import { Columns } from "zextra/layouts/columns";
 import { ScrollArea } from "zextra/containers";
 import { DownloadTrigger } from "zextra/actions";
-import { tags } from "ziko/ui";
+import { tags } from "ziko/dom";
 
 const {p, pre, a} = tags
 

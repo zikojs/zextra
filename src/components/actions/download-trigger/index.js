@@ -1,5 +1,5 @@
 // Inspiration : ChakraUI
-import { UIElement } from 'ziko/ui';
+import { UIElement } from 'ziko/dom';
 import { ZextraUI } from '../../../constructor/zextra-ui.js';
 export class UIDownloadTrigger extends ZextraUI{
     constructor({data, fileName, mimeType = 'text/plain'} = {}, controller){
