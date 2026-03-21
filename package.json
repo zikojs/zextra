@@ -1,6 +1,6 @@
 {
   "name": "zextra",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "src/index.js",
   "type": "module",
@@ -56,6 +56,8 @@
   },
   "dependencies": {
     "@lottiefiles/lottie-player": "^2.0.12",
+    "atropos": "^2.0.2",
+    "isotope-layout": "^3.0.6",
     "ziko": "^1.0.0",
     "ziko-lucide": "^0.5.0"
   }
