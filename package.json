@@ -1,10 +1,13 @@
 {
   "name": "zextra",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "src/index.js",
   "type": "module",
   "types": "./types/index.d.ts",
+  "bin": {
+    "zextra": "./bin/index.js"
+  },
   "exports": {
     "./style": {
       "import": "./src/styles/index.css"
@@ -58,6 +61,7 @@
     "@lottiefiles/lottie-player": "^2.0.12",
     "atropos": "^2.0.2",
     "isotope-layout": "^3.0.6",
+    "video.js": "^8.23.7",
     "ziko": "^1.0.0",
     "ziko-lucide": "^0.5.0"
   }

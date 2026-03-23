@@ -1,4 +1,4 @@
-import { UIElement } from "ziko/domm";
+import { UIElement } from "ziko/dom";
 
 class UIPaper extends UIElement{
     constructor({elevation, square} = {}, ...items){

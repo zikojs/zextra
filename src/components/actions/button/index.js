@@ -6,7 +6,7 @@
 // EndIcon 
 
 // Text Button => 
-import { UIElement } from "ziko/domm";
+import { UIElement } from "ziko/dom";
 
 class UIButton extends UIElement{
     constructor(text, variant, color){

@@ -1,4 +1,4 @@
-import { UIElement, View } from "ziko/domm";
+import { UIElement, View } from "ziko/dom";
 import './index.css'
 
 class UIAspectRatio extends UIElement{

@@ -1,6 +1,6 @@
 import { ZextraUI } from '../../../constructor/zextra-ui.js';
 import './index.css';
-import { tags } from 'ziko/domm';
+import { tags } from 'ziko/dom';
 const { input, ul, li} = tags
 export class UIAutocomplete extends ZextraUI{
     constructor({dataset = [], placeholder = 'Type something…'} = {}){
