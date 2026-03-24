@@ -1,4 +1,4 @@
-import { UIElement, tags } from "ziko/ui";
+import { UIElement, tags } from "ziko/dom";
 import 'atropos/css'
 import __Atropos__ from 'atropos';
 
