@@ -9,11 +9,17 @@
     "zextra": "./bin/index.js"
   },
   "exports": {
+    "./no-css/*":{
+      "import": "./src/components/*/main.js"
+    },
+    "./*":{
+      "import": "./src/components/*/index.js"
+    },
     "./style": {
       "import": "./src/styles/index.css"
     },
     "./style/*": "./src/*/index.css",
-    "./*": {
+    "./styled/*": {
       "import": "./src/components/*/index.js"
     },
     "./providers/*": {
@@ -51,18 +57,18 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-commonjs": "^29.0.3",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^1.0.0",
     "cross-env": "^10.1.0",
-    "rollup": "^4.60.0"
+    "rollup": "^4.62.2"
   },
   "dependencies": {
     "@lottiefiles/lottie-player": "^2.0.12",
     "atropos": "^2.0.2",
     "isotope-layout": "^3.0.6",
-    "video.js": "^8.23.7",
-    "ziko": "^1.0.0",
+    "video.js": "^8.23.9",
+    "ziko": "^1.1.0",
     "ziko-lucide": "^1.0.0"
   }
 }

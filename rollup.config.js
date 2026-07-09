@@ -21,9 +21,9 @@ const OUTPUT_NAME = Target === "index" ? `dist/zextra` : `dist/zextra-${Target}`
 
 const inputs = {
     index : "src/index.js",
-    ui : "src/ui/index.js",
-    canvas : "src/canvas/index.js",
-    svg : "src/svg/index.js"
+    // ui : "src/ui/index.js",
+    // canvas : "src/canvas/index.js",
+    // svg : "src/svg/index.js"
 }
 
 const output = [
