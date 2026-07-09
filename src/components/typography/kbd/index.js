@@ -1,2 +1,1 @@
-export * from './kbd.js'
-export * from './shortcut.js'
+export * from './main.js'
