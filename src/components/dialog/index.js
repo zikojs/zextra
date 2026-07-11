@@ -1,2 +1,1 @@
-export * from './dialog.js'
-export * from './modal.js'
+export * from './main.js'

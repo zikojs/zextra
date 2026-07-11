@@ -12,12 +12,7 @@ class UIDiff extends UIElement{
             this.item_after,
             this.resizer
         )
-        .style({
-            position : 'relative',
-            overflow : 'hidden',
-            touchAction : 'none',
-            // padding : '2px'
-        })
+        this.setAttr({class : 'zextra-diff'})
         this.#setupOrientation();
         this.#setupEvents()
     }

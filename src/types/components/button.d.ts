@@ -1,5 +1,5 @@
 import { UIElement } from "ziko/dom";
-import type { Variants } from '../shared/variants.d.ts'
+import type { Variants } from '../shared/variants.ts'
 
 declare class UIButton extends UIElement {}
 
