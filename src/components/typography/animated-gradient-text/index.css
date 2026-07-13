@@ -1,0 +1,27 @@
+ .zextra-gradient-text {
+    font-size: 60px;
+    font-weight: bold;
+
+    background-image: linear-gradient(
+      to right,
+      var(--color-from),
+      var(--color-to),
+      var(--color-from)
+    );
+
+    background-size: var(--bg-size) 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: gradientMove linear infinite;
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: 100% center;
+    }
+  }

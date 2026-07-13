@@ -1,3 +1,6 @@
 export * from './kbd/main.js'
 export * from './blockquote/main.js'
 export * from './code/main.js'
+export * from './aurora-text/main.js'
+export * from './animated-gradient-text/main.js'
+export * from './animated-shiny-text/main.js'

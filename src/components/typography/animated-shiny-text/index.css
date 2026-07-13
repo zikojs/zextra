@@ -1,0 +1,33 @@
+.zextra-shiny-text {
+  font-size: 60px;
+  font-weight: bold;
+
+  /* ✅ dynamic base color */
+  color: var(--text-color, rgba(255,255,255,0.5));
+  -webkit-text-fill-color: var(--text-color, rgba(255,255,255,0.5));
+
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    var(--shine-color, rgba(255,255,255,0.9)),
+    transparent
+  );
+
+  background-repeat: no-repeat;
+  background-size: var(--shiny-width) 100%;
+  background-position: 0 0;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: shiny 2s linear infinite;
+}
+
+@keyframes shiny {
+    0% {
+      background-position: calc(-1 * var(--shiny-width)) 0;
+    }
+    100% {
+      background-position: calc(100% + var(--shiny-width)) 0;
+    }
+}
