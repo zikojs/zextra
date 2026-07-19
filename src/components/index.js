@@ -10,7 +10,7 @@ export * from './nav';
 export * from './reveal';
 export * from './transition';
 export * from './typography';
-
+export * from './decorators/index.js'
 // export * from './alert';
 // export * from './splitter';
 // export * from './pagination';
