@@ -1,5 +1,5 @@
 /* Document Setup */
-body {
+/* body {
     background-color: #0b0b0c;
     display: flex;
     justify-content: center;
@@ -7,16 +7,11 @@ body {
     min-height: 100vh;
     margin: 0;
     overflow: hidden;
-}
+} */
 
-/* Core Component Config Variables */
-:root {
-    --electric-border-color: #5227FF;
-    --border-radius: 24px;
-}
 
 /* Base Card Container Setup */
-.electric-card-container {
+.zextra-electric-border {
     position: relative;
     width: 350px;
     height: 220px;
@@ -28,7 +23,7 @@ body {
 }
 
 /* Content Layout Positioning */
-.card-content {
+.zextra-electric-border .card-content {
     position: relative;
     z-index: 1;
     padding: 28px;
@@ -56,7 +51,7 @@ body {
 }
 
 /* Canvas Centering Layer */
-.canvas-wrapper {
+.zextra-electric-border .canvas-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -65,12 +60,12 @@ body {
     z-index: 2;
 }
 
-.canvas-wrapper canvas {
+.zextra-electric-border .canvas-wrapper canvas {
     display: block;
 }
 
 /* Layered Box Glow Effects */
-.glow-layers {
+.zextra-electric-border .glow-layers {
     position: absolute;
     inset: 0;
     border-radius: inherit;
@@ -78,25 +73,25 @@ body {
     z-index: 0;
 }
 
-.glow-layer {
+.zextra-electric-border .glow-layer {
     position: absolute;
     inset: 0;
     border-radius: inherit;
     pointer-events: none;
 }
 
-.glow-1 {
+.zextra-electric-border .glow-1 {
     border: 2px solid var(--electric-border-color);
     opacity: 0.6;
     filter: blur(1px);
 }
 
-.glow-2 {
+.zextra-electric-border .glow-2 {
     border: 2px solid var(--electric-border-color);
     filter: blur(4px);
 }
 
-.glow-3 {
+.zextra-electric-border .glow-3 {
     z-index: -1;
     transform: scale(1.1);
     opacity: 0.3;
