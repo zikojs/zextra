@@ -3,6 +3,7 @@ import { Wrap } from "../src/components/containers/wrap";
 import { ElectricBorder } from 'zextra/decorators/electric-border'
 // MorphingText(['Hello', 'world']).mount(document.body)
 import { Random } from 'ziko/math'
+import { Joystick } from 'zextra/inputs/joystick'
 
 import { tags } from "ziko/src/dom/index.js";
 const {h3, p} = tags
@@ -35,3 +36,8 @@ globalThis.a = ElectricBorder(
 
 ).mount(document.body)
 
+
+globalThis.j = Joystick().mount(document.body)
+ j.element.addEventListener("change", (e) => {
+      console.log("Circle [change]:", e.detail);
+    });
