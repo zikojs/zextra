@@ -11,7 +11,7 @@
 /* * {
     box-sizing: border-box;
 }
-/* 
+
 body {
     background-color: #0f172a;
     color: #f8fafc;
@@ -26,7 +26,7 @@ body {
     padding: 2rem;
     user-select: none;
     -webkit-user-select: none;
-} */ */
+} */
 
 /* Rigid container dimensions + center alignment */
 .zextra{
