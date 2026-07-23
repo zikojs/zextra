@@ -24,3 +24,8 @@
 .zextra-toc a:hover {
     text-decoration: underline;
 }
+
+/* .zextra-toc a:active, */
+.zextra-toc a[data-active="true"] {
+    color : green;
+}

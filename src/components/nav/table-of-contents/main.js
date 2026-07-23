@@ -15,7 +15,11 @@ export class UITableOfContents extends ZextraUI {
         this.toc_list = ul();
         this.depth = depth;
         this.labelFn = labelFn;
-        this.observer = null;
+        
+        this.observer = null;          
+        this.scrollObserver = null;    
+        this.activeLink = null;        
+        this.isClickScrolling = false; // Flag to prevent observer interference on click
 
         this.append(this.toc_list);
 
@@ -28,6 +32,65 @@ export class UITableOfContents extends ZextraUI {
         return Array.from({ length: max }, (_, i) => `h${i + 1}`).join(', ');
     }
 
+    #setActiveLink(newActive) {
+        if (!newActive) return;
+
+        // Resolve raw HTML element if a ziko UIElement wrapper was passed
+        const targetEl = newActive instanceof UIElement ? newActive.element : newActive;
+
+        // Force remove active state and data-active attribute from ALL links in the TOC list
+        const allLinks = this.toc_list.element.querySelectorAll('a');
+        allLinks.forEach(link => {
+            link.classList.remove('active');
+            link.removeAttribute('data-active');
+        });
+
+        // Set active attribute on the clicked/scrolled-to element
+        targetEl.classList.add('active');
+        targetEl.setAttribute('data-active', 'true');
+        this.activeLink = targetEl;
+    }
+
+    #setupScrollObserver(headings) {
+        if (this.scrollObserver) this.scrollObserver.disconnect();
+
+        const linkMap = new Map();
+        this.toc_list.element.querySelectorAll('a').forEach(anchor => {
+            const id = anchor.getAttribute('href').slice(1);
+            linkMap.set(id, anchor);
+        });
+
+        this.scrollObserver = new IntersectionObserver(
+            (entries) => {
+                // Ignore observer events triggered by anchor clicks
+                if (this.isClickScrolling) return;
+
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const targetId = entry.target.id;
+                        const newActive = linkMap.get(targetId);
+
+                        if (newActive && newActive !== this.activeLink) {
+                            console.log('Active TOC Section:', {
+                                id: targetId,
+                                text: newActive.textContent,
+                                element: entry.target
+                            });
+
+                            this.#setActiveLink(newActive);
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: '-20% 0px -40% 0px',
+                threshold: 0
+            }
+        );
+
+        headings.forEach((heading) => this.scrollObserver.observe(heading));
+    }
+
     #buildTOC() {
         const root = this.content ?? document.body;
         if (!root) return false; 
@@ -37,10 +100,8 @@ export class UITableOfContents extends ZextraUI {
         
         if (headings.length === 0) return false;
 
-        // Clear existing items
         this.toc_list.element.replaceChildren();
 
-        // Normalize depth into ordered array (once, outside loop)
         const levels = Array.isArray(this.depth)
             ? [...this.depth].sort((a, b) => a - b)
             : Array.from({ length: this.depth }, (_, i) => i + 1);
@@ -53,20 +114,35 @@ export class UITableOfContents extends ZextraUI {
                 ? this.labelFn(heading, level)
                 : heading.textContent;
             
-            li({},
-                a({ href: `#${heading.id}` }, label)
-            )
+            const link = a({ href: `#${heading.id}` }, label);
+
+            // Handle manual click explicitly
+            link.on('click', (e) => {
+                // Get the raw DOM element regardless of event wrapper structure
+                const targetAnchor = e.target || e.currentTarget;
+
+                this.#setActiveLink(targetAnchor);
+
+                // Pause observer during scroll jump
+                this.isClickScrolling = true;
+                setTimeout(() => {
+                    this.isClickScrolling = false;
+                }, 800);
+            });
+
+            li({}, link)
             .style({
                 marginLeft: `${relativeIndex * 15}px`
             })
             .mount(this.toc_list);
         });
 
+        this.#setupScrollObserver(headings);
+
         return true; 
     }
 
     #init() {
-        // Try building immediately
         const success = this.#buildTOC();
 
         if (!success) {
@@ -105,7 +181,10 @@ export class UITableOfContents extends ZextraUI {
             this.observer.disconnect();
             this.observer = null;
         }
-        // super.destroy?.();
+        if (this.scrollObserver) {
+            this.scrollObserver.disconnect();
+            this.scrollObserver = null;
+        }
     }
 
     refresh() {
@@ -114,3 +193,9 @@ export class UITableOfContents extends ZextraUI {
 }
 
 export const TableOfContents = call_with_optional_props(UITableOfContents);
+
+
+/*
+data-visible="true" is applied to every heading currently visible in the viewport.
+data-active="true" is applied exclusively to the topmost visible section (or the section manually clicked).
+*/

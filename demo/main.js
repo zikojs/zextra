@@ -4,6 +4,7 @@ import { ElectricBorder } from 'zextra/decorators/electric-border'
 // MorphingText(['Hello', 'world']).mount(document.body)
 import { Random } from 'ziko/math'
 import { Joystick } from 'zextra/inputs/joystick'
+import { TableOfContents } from "zextra/nav/table-of-contents";
 
 import { tags } from "ziko/src/dom/index.js";
 const {h3, p} = tags
@@ -41,3 +42,8 @@ globalThis.j = Joystick().mount(document.body)
  j.element.addEventListener("change", (e) => {
       console.log("Circle [change]:", e.detail);
     });
+
+TableOfContents().mount(document.body).style({
+    position : 'fixed',
+    right : '0'
+})
