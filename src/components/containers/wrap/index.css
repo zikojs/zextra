@@ -1,0 +1,8 @@
+.zextra{
+    &.wrap{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap : var(--zextra-gap)
+    }
+}

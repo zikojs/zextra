@@ -1,9 +1,30 @@
 import { MorphingText } from "zextra/typography/morphing-text";
+import { Wrap } from "../src/components/containers/wrap";
 import { ElectricBorder } from 'zextra/decorators/electric-border'
 // MorphingText(['Hello', 'world']).mount(document.body)
+import { Random } from 'ziko/math'
 
 import { tags } from "ziko/src/dom/index.js";
 const {h3, p} = tags
+
+const pp = () => p('Hello world').style({
+    width : Random.int(100,300)+'px',
+    height : Random.int(50,150)+'px', 
+    background : Random.color.hex()
+})
+
+Wrap({
+    gap : '20px'
+},
+   pp(),
+   pp(),
+   pp(),
+   pp()
+).mount(document.body).style({
+    border : '1px red solid',
+    margin : '10px',
+    width : '50vw'
+})
 
 globalThis.a = ElectricBorder(
     {},
@@ -13,3 +34,4 @@ globalThis.a = ElectricBorder(
     ),
 
 ).mount(document.body)
+
