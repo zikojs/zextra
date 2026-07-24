@@ -1,4 +1,4 @@
-import { UIElement } from 'ziko'
+import { UIElement } from 'ziko/dom'
 import { UICollapsible } from '../collapsible/main.js'
 
 class UIAccordion extends UIElement{

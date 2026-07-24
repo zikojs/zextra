@@ -1,0 +1,32 @@
+.marquee {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    border: 1px solid #333;
+    padding: 12px 0;
+    user-select: none;
+    touch-action: pan-y; /* Prevents vertical touch scroll from locking pointer events */
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+  }
+
+  .marquee-content {
+    display: flex;
+    gap: 3rem;
+    padding-right: 3rem;
+  }
+
+  .marquee-item {
+    white-space: nowrap;
+    font-size: 1.2rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      transform: translateX(0) !important;
+    }
+  }

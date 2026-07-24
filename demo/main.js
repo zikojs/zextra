@@ -5,9 +5,11 @@ import { ElectricBorder } from 'zextra/decorators/electric-border'
 import { Random } from 'ziko/math'
 import { Joystick } from 'zextra/inputs/joystick'
 import { TableOfContents } from "zextra/nav/table-of-contents";
-
+import { Marquee } from "zextra/reveal";
 import { tags } from "ziko/src/dom/index.js";
+
 const {h3, p} = tags
+globalThis.m = Marquee()
 
 const pp = () => p('Hello world').style({
     width : Random.int(100,300)+'px',
