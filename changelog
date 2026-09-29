@@ -1,27 +1,39 @@
-1.4.0 : Add `decorators/ElectricBorder`component 
-1.5.0 : Add `conatainers/Wrap` component 
-1.6.0 : Add `inputs/Joystick` input component
-1.6.1 : Fix `nav/TableOfContents` by tracking user scroll
-1.7.0 : 
-    Migrate from `decorators` to `borders`
-    Add `borders/ShineBorder` component
-1.8.0 : 
-    Add `feedback/Skeleton`
-1.9.0 :
-    Add `media/PixelImage` 
-1.10.0 : 
-    Add `nav/Glimpse`
-1.11.0 : 
-    Add `overlays/FloatingPanel`
-1.11.2 : 
-    Fix ziko-lucide icon subpath imports failing on esm.sh due to case-sensitive filesystem resolution
+1.15.0 :
+    Move `Flex` component from `ziko` to `zextra`
+1.14.0 :
+    Add `For` component
+1.13.0 : 
+    Migrate from `ziko@1.2.0` to `ziko@1.6.1`
+    Add `PrintPageBreak` component
+    Improve `FloatingPanel` using `Swap` from `ziko/dom` 
 1.12.0 : 
     Rename `actions` to `buttons`
     Remove readout from the `Joystick`component
     Use ziko-lucide components in `FloatingPanel`
     Introduce i18n in `FloatingPanel` controls
-1.13.0 : 
-    Migrate from `ziko@1.2.0` to `ziko@1.6.1`
-    Add `PrintPageBreak` component
-    Improve `FloatingPanel` using `Swap` from `ziko/dom` 
+1.11.2 : 
+    Fix ziko-lucide icon subpath imports failing on esm.sh due to case-sensitive filesystem resolution
+1.11.0 : 
+    Add `overlays/FloatingPanel`
+1.10.0 : 
+    Add `nav/Glimpse`
+1.9.0 :
+    Add `media/PixelImage` 
+1.8.0 : 
+    Add `feedback/Skeleton`
+1.7.0 : 
+    Migrate from `decorators` to `borders`
+    Add `borders/ShineBorder` component
+1.6.1 : Fix `nav/TableOfContents` by tracking user scroll
+1.6.0 : Add `inputs/Joystick` input component
+1.5.0 : Add `conatainers/Wrap` component    
+1.4.0 : Add `decorators/ElectricBorder`component 
+ 
+
+
+
+
+
+
+
 

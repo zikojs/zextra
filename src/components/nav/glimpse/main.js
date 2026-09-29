@@ -4,7 +4,7 @@ import {
     call_with_optional_props
 } from 'ziko/dom';
 
-const { a, div, img, span } = tags;
+const {  div, img, span } = tags;
 
 export class UIGlimpse extends UIElement{
     constructor({
