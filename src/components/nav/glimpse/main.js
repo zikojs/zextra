@@ -1,8 +1,11 @@
 import { 
     tags, 
     UIElement,
-    call_with_optional_props
 } from 'ziko/dom';
+
+import {
+    call_with_optional_props
+} from 'ziko/dom/internal-utils'
 
 const {  div, img, span } = tags;
 
