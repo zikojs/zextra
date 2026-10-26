@@ -1,0 +1,31 @@
+/* Container wrapper preserving dimensions */
+.pixel-image-container {
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    background-color: #18181b;
+}
+
+/* Pixel tile item */
+.pixel-tile {
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(0.85);
+    filter: grayscale(100%);
+    will-change: opacity, transform, filter;
+    transition-property: opacity, transform, filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Revealed state applied via JS delays */
+.pixel-tile.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Grayscale color reveal phase */
+.pixel-tile.color-active {
+    filter: grayscale(0%);
+}

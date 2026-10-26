@@ -1,69 +1,22 @@
 {
-  "name": "zextra",
-  "version": "1.15.2",
-  "description": "zikojs extra components",
-  "main": "src/index.js",
-  "type": "module",
-  "types": "./types/index.d.ts",
-  "bin": {
-    "zextra": "./bin/index.js"
+  "name": "zextra-root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "exports": {
-    "./no-css/*": {
-      "import": "./src/components/*/main.js"
-    },
-    "./*": {
-      "import": "./src/components/*/index.js",
-      "types": "./src/components/*/index.d.ts"
-    },
-    "./style": {
-      "import": "./src/styles/index.css"
-    },
-    "./style/*": "./src/*/index.css",
-    "./styled/*": {
-      "import": "./src/components/*/index.js"
-    },
-    "./providers/*": {
-      "import": "./src/providers/*/index.js"
-    },
-    "./wrappers/*": {
-      "import": "./wrappers/*/index.js"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.15.0",
+      "onFail": "download"
     }
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:ui": "cross-env NODE_ENV=development TARGET=ui rollup --config rollup.config.js",
-    "watch:ui": "cross-env NODE_ENV=development TARGET=ui rollup --config rollup.config.js -w",
-    "build:ui": "cross-env NODE_ENV=production TARGET=ui rollup --config rollup.config.js",
-    "dev:canvas": "cross-env NODE_ENV=development TARGET=canvas rollup --config rollup.config.js",
-    "watch:canvas": "cross-env NODE_ENV=development TARGET=canvas rollup --config rollup.config.js -w",
-    "build:canvas": "cross-env NODE_ENV=production TARGET=canvas rollup --config rollup.config.js",
-    "dev:svg": "cross-env NODE_ENV=development TARGET=svg rollup --config rollup.config.js",
-    "watch:svg": "cross-env NODE_ENV=development TARGET=svg rollup --config rollup.config.js -w",
-    "build:svg": "cross-env NODE_ENV=production TARGET=svg rollup --config rollup.config.js",
-    "dev:index": "cross-env NODE_ENV=development TARGET=index rollup --config rollup.config.js",
-    "watch:index": "cross-env NODE_ENV=development TARGET=index rollup --config rollup.config.js -w",
-    "build:index": "cross-env NODE_ENV=production TARGET=index rollup --config rollup.config.js",
-    "dev": "npm run dev:ui & npm run dev:canvas",
-    "build": "npm run build:ui & npm run build:canvas"
-  },
-  "author": "zakaria elalaoui",
-  "keywords": [
-    "zikojs"
-  ],
-  "license": "MIT",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^29.0.3",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "@rollup/plugin-terser": "^1.0.0",
-    "cross-env": "^10.1.0",
-    "glob": "^13.0.6",
-    "rollup": "^4.63.5",
-    "rollup-plugin-postcss": "^4.0.2"
-  },
-  "dependencies": {
-    "@zikojs/lucide": "^1.1.0",
-    "ziko": "^2.0.0-beta.15.1",
-    "ziko-lucide": "^1.0.2"
-  }
+  "packageManager": "pnpm@12.15.0",
+  "type": "module"
 }

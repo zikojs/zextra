@@ -1,0 +1,52 @@
+{
+  "name": "@zikojs/ui-borders",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "zikojs",
+    "zextra",
+    "components",
+    "ui",
+    "borders"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/zikojs/zextra#readme",
+  "bugs": {
+    "url": "https://github.com/zikojs/zextra/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zikojs/zextra.git",
+    "directory": "packages/ui/borders"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts"
+    },
+    "./no-css": {
+      "import": "./src/main.js",
+      "types": "./src/index.d.ts"
+    },
+    "./*": {
+      "import": "./src/*/index.js",
+      "types": "./src/*/index.d.ts"
+    },
+    "./no-css/*": {
+      "import": "./src/*/index.js",
+      "types": "./src/*/index.d.ts"
+    }
+  },
+  "license": "MIT",
+  "author": "zakaria elalaoui",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ziko": "catalog:"
+  }
+}
