@@ -1,6 +1,6 @@
 {
   "name": "zextra",
-  "version": "1.15.2",
+  "version": "1.15.3",
   "description": "zikojs extra components",
   "main": "src/index.js",
   "type": "module",
