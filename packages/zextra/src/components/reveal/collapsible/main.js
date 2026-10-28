@@ -1,4 +1,4 @@
-import { UIElement, tags } from "ziko";
+import { UIElement, tags } from "ziko/dom"
 class UICollapsible extends UIElement{
     constructor(summary_content, content){
         super({element : 'details', name: 'collapsible'});

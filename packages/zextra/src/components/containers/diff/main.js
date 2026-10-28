@@ -1,4 +1,4 @@
-import { UIElement, tags } from "ziko";
+import { UIElement, tags } from "ziko/dom"
 
 class UIDiff extends UIElement{
     constructor(item1, item2, {orientation = 'vertical'} = {}){

@@ -1,4 +1,4 @@
-import { UIElement } from "ziko";
+import { UIElement } from "ziko/dom";
 class ZikoUIModal extends UIElement{
     constructor(...UIElements){
         super("dialog", "modal")

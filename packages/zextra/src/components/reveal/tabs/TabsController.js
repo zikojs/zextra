@@ -1,4 +1,4 @@
-import { UIElement, tags } from "ziko";
+import { UIElement, tags } from "ziko/dom"
 class UITabsController extends UIElement{
     constructor(...Tab){
         super({element : 'div', name : 'zextra_tabs_controller'})

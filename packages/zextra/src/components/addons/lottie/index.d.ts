@@ -1,1 +1,0 @@
-export type * from 'zextra-plus/lottie'

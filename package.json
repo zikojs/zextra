@@ -18,5 +18,8 @@
     }
   },
   "packageManager": "pnpm@12.15.0",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@zikojs/lucide": "^1.1.0"
+  }
 }

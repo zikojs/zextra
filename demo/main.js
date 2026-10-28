@@ -1,12 +1,12 @@
 import { MorphingText } from "zextra/typography/morphing-text";
-import { Wrap } from "../src/components/containers/wrap";
+import { Wrap } from "zextra/containers/wrap";
 import { ElectricBorder, ShineBorder } from 'zextra/borders'
 // MorphingText(['Hello', 'world']).mount(document.body)
 import { Random } from 'ziko/math'
 import { Joystick } from 'zextra/inputs/joystick'
 import { TableOfContents } from "zextra/nav/table-of-contents";
 import { Marquee } from "zextra/reveal";
-import { tags } from "ziko/src/dom/index.js";
+import { tags } from "ziko/dom";
 import { Skeleton } from 'zextra/feedback'
 
 import { PixelImage } from 'zextra/media'

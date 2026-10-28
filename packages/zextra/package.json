@@ -62,8 +62,7 @@
     "rollup-plugin-postcss": "^4.0.2"
   },
   "dependencies": {
-    "@zikojs/lucide": "^1.1.0",
-    "ziko": "^2.0.0-beta.15.1",
-    "ziko-lucide": "^1.0.2"
+    "@zikojs/lucide": "catalog:",
+    "ziko": "catalog:"
   }
 }

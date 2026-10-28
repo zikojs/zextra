@@ -1,4 +1,4 @@
-import { UIElement, tags } from "ziko";
+import { UIElement, tags } from "ziko/dom"
 class __UISplitter__ extends UIElement{
     constructor(flexDirection, resizerCursor, resizerProp){
         super({element : "div", name : "splitter"})

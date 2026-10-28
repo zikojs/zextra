@@ -1,6 +1,7 @@
-import {tags, call_with_optional_props} from 'ziko/dom'
+import { tags } from 'ziko/dom'
+import { call_with_optional_props } from 'ziko/dom/internal-utils'
 import { ZextraUI } from '../../../constructor/zextra-ui.js';
-import { register } from 'ziko/helpers/register'
+// import { register } from 'ziko/helpers/register'
 const { div } = tags;
 
 export class MarqueeUI extends ZextraUI{
@@ -8,11 +9,11 @@ export class MarqueeUI extends ZextraUI{
         super({element : 'div'})
         this.setAttr({class : 'zextra marquee'})
         this.marquee_content = div({class : 'zextra marquee-content'})   
-        register(this, {
-            append : function(...items){
-                this.marquee_content.append(...items)
-            }
-        })
+        // register(this, {
+        //     append : function(...items){
+        //         this.marquee_content.append(...items)
+        //     }
+        // })
         super.append(this.marquee_content);
         this.globalScrollVelocity = 0;
         this.lastScrollY = globalThis?.scrollY

@@ -1,4 +1,4 @@
-import { UIElement } from "ziko"
+import { UIElement } from "ziko/dom"
 class ZikoUIList extends UIElement{
     constructor({ type = 'ol' } = {}, ...items){
         super(type)
