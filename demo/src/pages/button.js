@@ -3,10 +3,11 @@ import { Button } from 'zextra/buttons'
 const { br } = tags
 export default function Page(){
     return tags.section(
-        Button({ text : 'Outlined', variant : 'outlined', color : 'primary'}),
-        Button({ text : 'Contained', variant : 'contained', color : 'primary'}),
-        Button({ text : 'Text', variant : 'text', color : 'primary'}),
-        Button({ text : 'Soft', variant : 'soft', color : 'primary'}),
+        Button({ text : 'Outlined', variant : 'outlined', color : 'primary', 
+            effect : ['lift', 'glow', 'focus']}).on('click', ()=> console.log('kkk')),
+        Button({ text : 'Contained', variant : 'contained', color : 'primary', effect : ['ripple']}),
+        Button({ text : 'Text', variant : 'text', color : 'primary', effect : ['press']}),
+        Button({ text : 'Soft', variant : 'soft', color : 'primary', effect : ['glow']}),
         br(),
         Button({ text : 'Outlined', variant : 'outlined', color : 'secondary'}),
         Button({ text : 'Contained', variant : 'contained', color : 'secondary'}),

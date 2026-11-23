@@ -1,5 +1,14 @@
-/* Base */
+
+@import url('../../../styles/effects.css');
+
+/* =========================
+   Base
+========================= */
+
 .zextra-button {
+    --zextra-color: #1976d2;
+    --zextra-hover: #1565c0;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -9,12 +18,21 @@
     padding: 5px 12px;
 
     font: inherit;
+    border: 1px solid transparent;
     border-radius: 4px;
     cursor: pointer;
-    transition: background .2s, color .2s, border-color .2s, box-shadow .2s;
+
+    transition:
+        color 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
 }
 
-/* Sizes */
+/* =========================
+   Sizes
+========================= */
+
 .zextra-button--small {
     padding: 4px 8px;
     font-size: 0.8125rem;
@@ -30,26 +48,10 @@
     font-size: 1rem;
 }
 
-/* Contained */
-.zextra-button--contained {
-    border: none;
-    box-shadow: 0 6px 18px rgba(12, 20, 40, 0.08);
-}
+/* =========================
+   Colors
+========================= */
 
-/* Outlined */
-.zextra-button--outlined {
-    border: 1px solid currentColor;
-    background: transparent;
-}
-
-/* Text */
-.zextra-button--text {
-    border: none;
-    background: transparent;
-    box-shadow: none;
-}
-
-/* Colors */
 .zextra-button--primary {
     --zextra-color: #1976d2;
     --zextra-hover: #1565c0;
@@ -80,70 +82,83 @@
     --zextra-hover: #0277bd;
 }
 
-.zextra-button--primary,
-.zextra-button--secondary,
-.zextra-button--success,
-.zextra-button--error,
-.zextra-button--warning,
-.zextra-button--info {
-    color: var(--zextra-color);
-}
+/* =========================
+   Variants
+========================= */
 
-/* Contained colors */
-.zextra-button--contained.zextra-button--primary,
-.zextra-button--contained.zextra-button--secondary,
-.zextra-button--contained.zextra-button--success,
-.zextra-button--contained.zextra-button--error,
-.zextra-button--contained.zextra-button--warning,
-.zextra-button--contained.zextra-button--info {
+/* Contained */
+
+.zextra-button--contained {
     color: #fff;
     background: var(--zextra-color);
+    box-shadow: 0 6px 18px rgba(12, 20, 40, 0.08);
 }
 
-.zextra-button--contained:hover {
+.zextra-button--contained:hover:not(:disabled) {
     background: var(--zextra-hover);
 }
 
-/* Outlined colors */
+/* Outlined */
+
 .zextra-button--outlined {
+    color: var(--zextra-color);
+    background: transparent;
     border-color: var(--zextra-color);
-    color: var(--zextra-color);
 }
 
-.zextra-button--outlined:hover {
-    background: color-mix(in srgb, var(--zextra-color) 8%, transparent);
+.zextra-button--outlined:hover:not(:disabled) {
+    background: color-mix(
+        in srgb,
+        var(--zextra-color) 8%,
+        transparent
+    );
 }
 
-/* Soft */
-.zextra-button--soft {
-    border: none;
-    background: color-mix(in srgb, var(--zextra-color) 12%, transparent);
+/* Text */
+
+.zextra-button--text {
     color: var(--zextra-color);
+    background: transparent;
+    border-color: transparent;
     box-shadow: none;
 }
 
-.zextra-button--soft:hover {
-    background: color-mix(in srgb, var(--zextra-color) 20%, transparent);
+.zextra-button--text:hover:not(:disabled) {
+    background: color-mix(
+        in srgb,
+        var(--zextra-color) 8%,
+        transparent
+    );
 }
 
-/* Text colors */
-.zextra-button--text {
+/* Soft */
+
+.zextra-button--soft {
     color: var(--zextra-color);
+    background: color-mix(
+        in srgb,
+        var(--zextra-color) 12%,
+        transparent
+    );
+    border-color: transparent;
+    box-shadow: none;
 }
 
-.zextra-button--text:hover {
-    background: color-mix(in srgb, var(--zextra-color) 8%, transparent);
+.zextra-button--soft:hover:not(:disabled) {
+    background: color-mix(
+        in srgb,
+        var(--zextra-color) 20%,
+        transparent
+    );
 }
 
-/* Focus */
-.zextra-button:focus-visible {
-    outline: 2px solid var(--zextra-color);
-    outline-offset: 2px;
-}
+/* =========================
+   Disabled
+========================= */
 
-/* Disabled */
 .zextra-button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
+    box-shadow: none;
 }

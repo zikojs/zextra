@@ -1,0 +1,111 @@
+/* Base effects */
+.zextra-effect {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Lift */
+.zextra-effect--lift {
+    transition: transform 180ms ease;
+}
+
+.zextra-effect--lift:hover {
+    transform: translateY(-2px);
+}
+
+/* Press */
+.zextra-effect--press {
+    transition: transform 180ms ease;
+}
+
+.zextra-effect--press:active {
+    transform: scale(0.97);
+}
+
+/* Glow */
+.zextra-effect--glow {
+    transition: box-shadow 180ms ease;
+}
+
+.zextra-effect--glow:hover {
+    box-shadow: 0 0 14px var(--zextra-color, #1976d2);
+}
+
+/* Shine */
+.zextra-effect--shine {
+    overflow: hidden;
+}
+
+.zextra-effect--shine::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.25),
+        transparent
+    );
+    transform: translateX(-120%);
+}
+
+.zextra-effect--shine:hover::before {
+    transition: transform 500ms ease;
+    transform: translateX(120%);
+}
+
+/* Ripple */
+.zextra-effect--ripple {
+    overflow: hidden;
+}
+
+.zextra-effect--ripple::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: currentColor;
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+}
+
+.zextra-effect--ripple:active::after {
+    animation: zextra-ripple 400ms ease-out;
+}
+
+@keyframes zextra-ripple {
+    from {
+        opacity: .18;
+        transform: scale(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .zextra-effect,
+    .zextra-effect *,
+    .zextra-effect::before,
+    .zextra-effect::after,
+    .zextra-effect--lift,
+    .zextra-effect--press,
+    .zextra-effect--glow,
+    .zextra-effect--shine,
+    .zextra-effect--ripple {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .zextra-effect--lift:hover,
+    .zextra-effect--press:active {
+        transform: none !important;
+    }
+}
