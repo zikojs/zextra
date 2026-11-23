@@ -13,5 +13,3 @@ catalog:
   # "@rollup/plugin-node-resolve": "^16.0.3"
   # "@rollup/plugin-terser": "^0.4.4"
   # "rollup": ^4.65.0
-minimumReleaseAgeExclude:
-  - ziko@2.0.0-rc.11

@@ -1,4 +1,4 @@
-import {createSPAFileBasedRouter} from 'ziko/router'
+import {createFileBasedRouter} from 'ziko/router'
 // console.log(import.meta.glob("./pages/**/*.js"))
 
-createSPAFileBasedRouter({pages: import.meta.glob("./pages/**/*.js")})
+createFileBasedRouter({pages: import.meta.glob("./pages/**/*.js")})
