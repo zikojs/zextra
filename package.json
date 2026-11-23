@@ -20,6 +20,7 @@
   "packageManager": "pnpm@12.15.0",
   "type": "module",
   "dependencies": {
-    "@zikojs/lucide": "^1.1.0"
+    "@zikojs/lucide": "^1.1.0",
+    "ziko": "2.0.0-rc.11"
   }
 }

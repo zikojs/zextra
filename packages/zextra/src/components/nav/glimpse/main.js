@@ -4,7 +4,7 @@ import {
 } from 'ziko/dom';
 
 import {
-    call_with_optional_props
+    callWithOptionalProps
 } from 'ziko/dom/internal-utils'
 
 const {  div, img, span } = tags;
@@ -143,4 +143,4 @@ export class UIGlimpse extends UIElement{
     }
 }
 
-export const Glimpse = call_with_optional_props(UIGlimpse);
+export const Glimpse = callWithOptionalProps(UIGlimpse);

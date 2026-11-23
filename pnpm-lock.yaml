@@ -169,7 +169,7 @@ catalogs:
       version: 1.1.0
     ziko:
       specifier: latest
-      version: 2.0.0-beta.17.2
+      version: 2.0.0-rc.10
 
 importers:
 
@@ -178,6 +178,9 @@ importers:
       '@zikojs/lucide':
         specifier: ^1.1.0
         version: 1.1.0
+      ziko:
+        specifier: 2.0.0-rc.11
+        version: 2.0.0-rc.11
 
   demo:
     devDependencies:
@@ -188,66 +191,6 @@ importers:
         specifier: workspace:*
         version: link:../packages/zextra
 
-  packages/modules/components/actions:
-    dependencies:
-      ziko:
-        specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
-
-  packages/modules/components/borders:
-    dependencies:
-      ziko:
-        specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
-
-  packages/modules/components/containers:
-    dependencies:
-      ziko:
-        specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
-
-  packages/modules/components/feedback:
-    dependencies:
-      ziko:
-        specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
-
-  packages/modules/components/inputs:
-    dependencies:
-      ziko:
-        specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
-
-  packages/modules/components/lists:
-    dependencies:
-      ziko:
-        specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
-
-  packages/modules/components/media:
-    dependencies:
-      ziko:
-        specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
-
-  packages/modules/components/nav:
-    dependencies:
-      ziko:
-        specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
-
-  packages/modules/components/transitions:
-    dependencies:
-      ziko:
-        specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
-
-  packages/modules/components/typography:
-    dependencies:
-      ziko:
-        specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
-
   packages/zextra:
     dependencies:
       '@zikojs/lucide':
@@ -255,7 +198,7 @@ importers:
         version: 1.1.0
       ziko:
         specifier: 'catalog:'
-        version: 2.0.0-beta.17.2
+        version: 2.0.0-rc.10
     devDependencies:
       '@rollup/plugin-commonjs':
         specifier: ^29.0.3
@@ -1361,8 +1304,11 @@ packages:
     resolution: {integrity: sha512-vIYeF1u3CjlhAFekPPAk2h/Kv4T3mAkMox5OymRiJQB0spDP10LHvt+K7G9Ny6NuuMAb25/6n1qyUjAcGNf/AA==}
     engines: {node: '>= 6'}
 
-  ziko@2.0.0-beta.17.2:
-    resolution: {integrity: sha512-UEk3orR14SjrfS+b9nHeX5a1N6f+BxwSm6gb/580oYUyn8f6bKjJ89D6eomknnLjy4dSNQq+NjSEkjVk9KdlSg==}
+  ziko@2.0.0-rc.10:
+    resolution: {integrity: sha512-KwF81NYcybeyp8YjuR3wpv9C+QGAMW0O8zasZxRCuUlfKfjOi3p216AN42R+0wTJqyYt02I1oC4MkuTdzKFnOg==}
+
+  ziko@2.0.0-rc.11:
+    resolution: {integrity: sha512-IuuEyy8TQ5R2WDzehNJrKaVxlUxXBsq/ugWjGNPFvNZfHSnKoGZaSn38hFr1VdNe8K/F1zZ4q7jVn4YPwh0wcQ==}
 
 snapshots:
 
@@ -1559,7 +1505,7 @@ snapshots:
   '@zikojs/lucide@1.1.0':
     dependencies:
       lucide: 1.62.0
-      ziko: 2.0.0-beta.17.2
+      ziko: 2.0.0-rc.10
 
   acorn@8.19.0: {}
 
@@ -2278,4 +2224,6 @@ snapshots:
 
   yaml@1.10.3: {}
 
-  ziko@2.0.0-beta.17.2: {}
+  ziko@2.0.0-rc.10: {}
+
+  ziko@2.0.0-rc.11: {}

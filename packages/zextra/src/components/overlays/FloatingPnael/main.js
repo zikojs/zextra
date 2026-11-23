@@ -1,6 +1,6 @@
 import { 
   UIElement, 
-  call_with_optional_props, 
+  callWithOptionalProps, 
   tags,
   Swap
 } from 'ziko/dom';
@@ -270,4 +270,4 @@ export class UIFloatingPanel extends UIElement{
       }
 }
 
-export const FloatingPanel = call_with_optional_props(UIFloatingPanel);
+export const FloatingPanel = callWithOptionalProps(UIFloatingPanel);

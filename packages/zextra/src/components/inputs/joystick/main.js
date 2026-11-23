@@ -1,7 +1,7 @@
 import {
     UIElement, 
     tags,
-    call_with_optional_props
+    callWithOptionalProps
 } from 'ziko/dom'
 
 import {
@@ -184,4 +184,4 @@ class UIJoystick extends UIElement{
 }
 
 
-export const Joystick = call_with_optional_props(UIJoystick)
+export const Joystick = callWithOptionalProps(UIJoystick)

@@ -1,5 +1,5 @@
 import { tags } from 'ziko/dom'
-import { call_with_optional_props } from 'ziko/dom/internal-utils'
+import { callWithOptionalProps } from 'ziko/dom/internal-utils'
 import { ZextraUI } from '../../../constructor/zextra-ui.js';
 // import { register } from 'ziko/helpers/register'
 const { div } = tags;
@@ -25,4 +25,4 @@ export class MarqueeUI extends ZextraUI{
 }
 
 
-export const Marquee = call_with_optional_props(MarqueeUI);
+export const Marquee = callWithOptionalProps(MarqueeUI);

@@ -1,4 +1,4 @@
-import { UIElement, tags, call_with_optional_props } from "ziko/dom";
+import { UIElement, tags, callWithOptionalProps } from "ziko/dom";
 
 const { div } = tags;
 
@@ -27,4 +27,4 @@ class UIShineBorder extends UIElement{
     }
 }
 
-export const ShineBorder = call_with_optional_props(UIShineBorder)
+export const ShineBorder = callWithOptionalProps(UIShineBorder)

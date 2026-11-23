@@ -1,4 +1,4 @@
-import {tags, UIElement, call_with_optional_props} from 'ziko/dom'
+import {tags, UIElement, callWithOptionalProps} from 'ziko/dom'
 
 const { div } = tags;
 
@@ -30,4 +30,4 @@ export class UISkeleton extends UIElement{
     }
 }
 
-export const Skeleton = call_with_optional_props(UISkeleton);
+export const Skeleton = callWithOptionalProps(UISkeleton);

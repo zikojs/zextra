@@ -1,4 +1,4 @@
-import { tags, UIElement, call_with_optional_props } from "ziko/dom";
+import { tags, UIElement, callWithOptionalProps } from "ziko/dom";
 const { div } = tags;
 
 export class UIPrintPageBreak extends UIElement {
@@ -27,4 +27,4 @@ export class UIPrintPageBreak extends UIElement {
     }
 }
 
-export const PrintPageBreak = call_with_optional_props(UIPrintPageBreak)
+export const PrintPageBreak = callWithOptionalProps(UIPrintPageBreak)

@@ -1,5 +1,5 @@
 import { ZextraUI } from '../../../constructor/zextra-ui.js';
-import { call_with_optional_props } from 'ziko/dom';
+import { callWithOptionalProps } from 'ziko/dom';
 export class UIColumns extends ZextraUI{
     constructor({gap = 1} = {}, ...items){
         super({element : 'div'})
@@ -13,4 +13,4 @@ export class UIColumns extends ZextraUI{
         this.append(...items)
     }
 }
-export const Columns = call_with_optional_props(UIColumns)
+export const Columns = callWithOptionalProps(UIColumns)

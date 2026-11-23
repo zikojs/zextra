@@ -1,5 +1,5 @@
 import { ZextraUI } from '../../../constructor/zextra-ui.js';
-import { call_with_optional_props } from 'ziko/dom';
+import { callWithOptionalProps } from 'ziko/dom';
 
 export class UIScrollArea extends ZextraUI{
     constructor({element = 'div'} = {}, ...items){
@@ -8,4 +8,4 @@ export class UIScrollArea extends ZextraUI{
         this.append(...items)
     }
 }
-export const ScrollArea = call_with_optional_props(UIScrollArea)
+export const ScrollArea = callWithOptionalProps(UIScrollArea)

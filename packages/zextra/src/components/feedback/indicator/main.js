@@ -1,4 +1,4 @@
-import {tags, UIElement, call_with_optional_props} from 'ziko/dom'
+import {tags, UIElement, callWithOptionalProps} from 'ziko/dom'
 
 const { div } = tags;
 
@@ -9,4 +9,4 @@ export class UIIndicator extends UIElement{
 
 }
 
-export const indicator = call_with_optional_props(UIIndicator)
+export const indicator = callWithOptionalProps(UIIndicator)

@@ -1,5 +1,5 @@
 import { ZextraUI } from '../../../constructor/zextra-ui.js';
-import { tags, call_with_optional_props, UIElement } from 'ziko/dom';
+import { tags, callWithOptionalProps, UIElement } from 'ziko/dom';
 
 const { ul, li, a } = tags;
 
@@ -192,7 +192,7 @@ export class UITableOfContents extends ZextraUI {
     }
 }
 
-export const TableOfContents = call_with_optional_props(UITableOfContents);
+export const TableOfContents = callWithOptionalProps(UITableOfContents);
 
 
 /*

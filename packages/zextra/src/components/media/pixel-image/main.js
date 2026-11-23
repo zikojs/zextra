@@ -1,4 +1,4 @@
-import {tags, UIElement, call_with_optional_props} from 'ziko/dom'
+import {tags, UIElement, callWithOptionalProps} from 'ziko/dom'
 
 const { div } = tags;
 
@@ -86,4 +86,4 @@ export class UIPixelImage extends UIElement{
     }
 }
 
-export const PixelImage  = call_with_optional_props(UIPixelImage);
+export const PixelImage  = callWithOptionalProps(UIPixelImage);

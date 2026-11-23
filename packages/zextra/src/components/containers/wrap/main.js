@@ -1,5 +1,5 @@
 import { ZextraUI } from '../../../constructor/zextra-ui.js';
-import { call_with_optional_props } from 'ziko/dom';
+import { callWithOptionalProps } from 'ziko/dom';
 
 export class UIWrap extends ZextraUI{
     constructor({as = 'div', gap} = {}, ...items){
@@ -13,4 +13,4 @@ export class UIWrap extends ZextraUI{
         return this;
     }
 }
-export const Wrap = call_with_optional_props(UIWrap)
+export const Wrap = callWithOptionalProps(UIWrap)

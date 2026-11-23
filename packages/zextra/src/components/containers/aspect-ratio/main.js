@@ -1,4 +1,4 @@
-import { UIElement, View } from "ziko/dom";
+import { UIElement } from "ziko/dom";
 
 class UIAspectRatio extends UIElement{
     constructor(item, {ratio}){
